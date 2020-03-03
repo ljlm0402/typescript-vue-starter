@@ -1,0 +1,24 @@
+{
+  "name": "typescript-vue-starter",
+  "version": "0.0.0",
+  "description": "Quick and Easy TypeScript Vue Starter",
+  "author": "AGUMON <ljlm0402@gmail.com>",
+  "license": "MIT",
+  "main": "bin/cli.js",
+  "keywords": [
+    "typescript",
+    "vue"
+  ],
+  "bin": {},
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljlm0402/typescript-vue-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ljlm0402/typescript-vue-starter/issues"
+  },
+  "homepage": "https://github.com/ljlm0402/typescript-vue-starter#readme"
+}
