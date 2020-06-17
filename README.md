@@ -46,9 +46,8 @@ $ cd "project name" && npm run start
 
 ## 🎠 Available commands for the server.
 
-- Run the Server in production mode : `npm run serve`.
-- Run the Server in development mode : `npm run dev`.
-- Run all unit-tests: `npm run test`.
+- Run the Server : `npm run serve`.
+- Build Static File: `npm run build`.
 - Check for linting errors: `npm run lint`.
 
 ## 📬 Recommended Commit Message
