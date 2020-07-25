@@ -1,5 +1,6 @@
 import { AxiosError } from 'axios'
 
+/* eslint-disable */
 export const httpErrorHandler = (error: AxiosError): void => {
   let message = ''
   if (error.response) {
@@ -31,5 +32,6 @@ export const httpErrorHandler = (error: AxiosError): void => {
 
   if (message) {
     alert('Connection Fail\nErrorCode: ' + error.name + '\nErrorMessage : ' + error.message)
+    return
   }
 }

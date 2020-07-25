@@ -1,13 +1,17 @@
 {
   "name": "typescript-vue-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quick and Easy TypeScript Vue Starter",
   "author": "AGUMON <ljlm0402@gmail.com>",
   "license": "MIT",
   "main": "bin/cli.js",
   "keywords": [
     "typescript",
-    "vue"
+    "vue",
+    "vue-i18n",
+    "vue-router",
+    "vuex",
+    "vuex-persistedstate"
   ],
   "bin": {
     "typescript-vue-starter": "bin/cli.js"
