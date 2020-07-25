@@ -4,6 +4,7 @@
 
 <a href="https://www.npmjs.com/package/typescript-vue-starter" target="_blank"><img src="https://img.shields.io/npm/v/typescript-vue-starter.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/package/typescript-vue-starter" target="_blank"><img src="https://img.shields.io/npm/l/typescript-vue-starter.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/package/typescript-vue-starter" target="_blank"><img src="https://img.shields.io/github/v/release/ljlm0402/typescript-vue-starter" alt="Release Version" /></a>
 <a href="https://www.npmjs.com/package/typescript-vue-starter" target="_blank"><img src="https://img.shields.io/npm/dm/typescript-vue-starter.svg" alt="NPM Downloads" /></a>
 
 <br />
