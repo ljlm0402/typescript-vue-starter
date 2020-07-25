@@ -19,15 +19,15 @@ const routes: Array<RouteConfig> = [
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes: routes
 })
 
 router.beforeEach((to, from, next) => {
-  if (!window.commonUtils.permission.routeAuth(to.fullPath)) {
+  if (!window.commonUtils.auth.route(to.fullPath)) {
     alert('Forbidden')
   }
 
-  if (!window.commonUtils.permission.metaAuth(to.meta.AuthLevel)) {
+  if (!window.commonUtils.auth.meta(to.meta.AuthLevel)) {
     alert('Forbidden')
   }
 

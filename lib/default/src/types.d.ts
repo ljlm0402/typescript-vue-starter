@@ -1,12 +1,9 @@
 import { AxiosInstance } from 'axios'
-import VueRouter, { Route } from 'vue-router'
 
 declare module 'vue/types/vue' {
   interface Vue {
     // prototype
     $http: AxiosInstance;
-    $router: VueRouter;
-    $route: Route;
     $EventBus: Vue;
 
     // mixin
