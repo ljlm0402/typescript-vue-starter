@@ -1,9 +1,7 @@
-import { UserState } from './interface'
+import { Count } from './interface'
 
-const store: UserState = {
-  isLogin: false,
-  errorCode: -1,
-  userInfo: null
+const state: Count = {
+  count: 0
 }
 
-export default store
+export default state
