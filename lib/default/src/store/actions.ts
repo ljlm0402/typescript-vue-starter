@@ -1,22 +1,16 @@
-import { Commit, Dispatch } from 'vuex'
-import * as actions from './mutations-types'
-import { LoginForm } from './interface'
+import { Commit } from 'vuex'
+import { ADDCOUNT, SUBCOUNT } from './mutations-types'
+import { Count } from './interface'
 
-export const login = (context: { commit: Commit; dispatch: Dispatch }, loginForm: LoginForm): void => {
-  const token = {
-    type: 'Bearer',
-    value: 'qwertyuiop123456789'
-  }
-
-  sessionStorage.setItem('access_token', JSON.stringify(token))
-  context.commit(actions.LOGIN_SUCCESS, loginForm.id)
+export const addCount = (context: { commit: Commit }, count: Count): void => {
+  context.commit(ADDCOUNT, count)
 }
 
-export const logout = (context: { commit: Commit }): void => {
-  context.commit(actions.LOGOUT)
+export const subCount = (context: { commit: Commit }, count: Count): void => {
+  context.commit(SUBCOUNT, count)
 }
 
 export default {
-  login,
-  logout
+  addCount,
+  subCount
 }

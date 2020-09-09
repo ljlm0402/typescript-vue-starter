@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import createLogger from 'vuex/dist/logger'
-import createPersistedState from 'vuex-persistedstate'
+import syncStateStorage from 'vuex-state-storage-sync'
 
 // NameSpace Patterns
 import state from './states'
@@ -14,6 +14,7 @@ import users from './users'
 
 Vue.use(Vuex)
 
+// eslint-disable-next-line
 const debug: any = process.env.NODE_ENV !== 'production'
 
 export default new Vuex.Store({
@@ -27,10 +28,15 @@ export default new Vuex.Store({
   strict: debug,
   plugins: [
     debug && createLogger(),
-    createPersistedState({
+    syncStateStorage({
       storage: window.sessionStorage,
-      key: 'userInfo',
-      paths: ['isLogin', 'errorCode', 'userInfo']
+      key: 'count',
+      paths: ['count']
+    }),
+    syncStateStorage({
+      storage: window.sessionStorage,
+      key: 'users',
+      paths: ['users.isLogin', 'users.userInfo']
     })
   ]
 })

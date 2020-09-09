@@ -1,37 +1,83 @@
-import { Commit } from 'vuex'
+import { Commit, Dispatch } from 'vuex'
 
-const ADDCOUNT = 'ADDCOUNT'
-const SUBCOUNT = 'SUBCOUNT'
+/**
+ * mutations types
+ */
+const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+const LOGIN_FAIL = 'LOGIN_FAIL'
+const LOGOUT = 'LOGOUT'
 
-interface Count {
-    count: number
+/**
+ * interface
+ */
+interface UserInfo {
+  id: string;
+  name: string;
+  auth: string;
+  grade?: number;
 }
 
-const state: Count = {
-  count: 0
+interface UserState {
+  isLogin: boolean;
+  userInfo: UserInfo | null;
 }
 
+interface LoginForm {
+  id: string;
+  password: string;
+}
+
+/**
+ * state
+ */
+const state: UserState = {
+  isLogin: false,
+  userInfo: null
+}
+
+/**
+ * getters
+ */
 const getters = {
-  getCount (state: Count): number {
-    return state.count
+  getUser (state: { userInfo: UserInfo }): UserInfo | null {
+    return state.userInfo
   }
 }
 
+/**
+ * actions
+ */
 const actions = {
-  addCount (context: { commit: Commit }, count: Count): void {
-    context.commit(ADDCOUNT, count)
+  login (context: { commit: Commit; dispatch: Dispatch }, loginForm: LoginForm): void {
+    const token = {
+      type: 'Bearer',
+      value: 'qwertyuiop123456789'
+    }
+
+    sessionStorage.setItem('access_token', JSON.stringify(token))
+    context.commit(LOGIN_SUCCESS, loginForm)
   },
-  subCount (context: { commit: Commit }, count: Count): void {
-    context.commit(SUBCOUNT, count)
+  logout (context: { commit: Commit }): void {
+    context.commit(LOGOUT)
   }
 }
 
+/**
+ * mutations
+ */
 const mutations = {
-  [ADDCOUNT] (state: Count, payload: number): void {
-    state.count += payload
+  [LOGIN_SUCCESS] (state: { isLogin: boolean; userInfo: UserInfo }, payload: UserInfo): void {
+    state.isLogin = true
+    state.userInfo = payload
   },
-  [SUBCOUNT] (state: Count, payload: number): void {
-    state.count -= payload
+  [LOGIN_FAIL] (state: { isLogin: boolean; userInfo: null }): void {
+    state.isLogin = false
+    state.userInfo = null
+  },
+  [LOGOUT] (state: { isLogin: boolean; userInfo: null }): void {
+    state.isLogin = false
+    state.userInfo = null
+    sessionStorage.removeItem('access_token')
   }
 }
 

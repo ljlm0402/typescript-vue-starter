@@ -1,12 +1,11 @@
 import { AxiosInstance } from 'axios'
 
+/* eslint-disable */
 declare module 'vue/types/vue' {
   interface Vue {
-    // prototype
     $http: AxiosInstance;
     $EventBus: Vue;
 
-    // mixin
     _ROUTER_PUSH(url: string): void;
     _ROUTER_PUSH_PARAMS(name: string, params: any): void;
     _EMIT_EVENT(event: string, arg: any): void;
