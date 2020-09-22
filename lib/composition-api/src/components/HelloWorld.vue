@@ -25,8 +25,9 @@
     <select v-model="state.selected">
       <option disabled value="">{{ $t("SELECT") }}</option>
       <option value="KOR">{{ $t("KOREAN") }}</option>
-      <option value="ENG">{{ $t("ENGLISH") }}</option></select
-    ><br />
+      <option value="ENG">{{ $t("ENGLISH") }}</option>
+    </select>
+    <br />
 
     <button @click="reload()">{{ $t("RELOAD") }}</button>
   </div>
