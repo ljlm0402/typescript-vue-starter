@@ -1,0 +1,16 @@
+{
+    "HOME": "Home",
+    "ABOUT": "About",
+    "WELCOME": "Welcome {0}",
+    "NOUSER": "No User",
+    "LOGIN": "LOGIN",
+    "LOGOUT": "LOGOUT",
+    "ROUTE": "ROUTE",
+    "EVENT_BUS": "EVENT BUS",
+    "SELECT": "Select",
+    "KOREAN": "Korean",
+    "ENGLISH": "English",
+    "RELOAD": "Reload",
+    "ADD": "Add",
+    "SUB": "Sub"
+}
