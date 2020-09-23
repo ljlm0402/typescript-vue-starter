@@ -61,6 +61,7 @@ $ cd "project name" && npm run start
 | Add package | package: 📦 Add package |
 | Fix readme | docs: 📚 Fix readme |
 | Improvements style | style: 👁 Improvements style |
+| New Releases | releases: 🎉 Releases |
 
 ## 💳 License
 
