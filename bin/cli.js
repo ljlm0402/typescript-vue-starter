@@ -2,7 +2,7 @@
 
 /*****************************************************************
  * Create new typescript-vue-starter project.
- * created by Lim Kyungmin, 06/17/2020
+ * Created by Lim Kyungmin, 03/03/2020
  *****************************************************************/
 
 const path = require('path');

@@ -51,6 +51,65 @@ $ cd "project name" && npm run start
 - Build Static File: `npm run build`.
 - Check for linting errors: `npm run lint`.
 
+## 🗂 Code Structure (default)
+
+```bash
+│
+├── /public
+│   ├── favicon.ico
+│   └── index.html
+│
+├── /src
+│   ├── /assets
+│   │   └── logo.png
+│   │
+│   ├── /components
+│   │   └── HelloWorld.vue
+│   │
+│   ├── /locales
+│   │   ├── ENG.json
+│   │   └── KOR.json
+│   │
+│   ├── /router
+│   │   └── index.ts
+│   │
+│   ├── /store
+│   │   ├── /users
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── actions.ts
+│   │   ├── getters.ts
+│   │   ├── index.ts
+│   │   ├── interface.ts
+│   │   ├── mutations-types.ts
+│   │   ├── mutations.ts
+│   │   └── states.ts
+│   │
+│   ├── /utils
+│   │   ├── auth.route.ts
+│   │   ├── index.route.ts
+│   │   └── users.route.ts
+│   │
+│   ├── /views
+│   │   ├── auth.service.ts
+│   │   └── users.service.ts
+│   │
+│   ├── App.vue
+│   ├── main.ts
+│   ├── shims-tsx.d.ts
+│   ├── shims-vue.d.ts
+│   └── types.d.ts
+│
+├── .browserslistrc
+├── .editorconfig
+├── .eslintrc.js
+├── .gitignore
+├── babel.config.js
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+```
+
 ## 📬 Recommended Commit Message
 
 |  When |  Commit Message  |

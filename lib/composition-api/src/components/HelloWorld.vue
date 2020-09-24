@@ -40,70 +40,70 @@ import {
   watch,
   computed,
   onMounted,
-  onUnmounted,
-} from "@vue/composition-api";
+  onUnmounted
+} from '@vue/composition-api'
 
 export default defineComponent({
-  setup(_, context) {
+  setup (_, context) {
     const useState = reactive({
-      selected: window.sessionStorage.locale,
-    });
+      selected: window.sessionStorage.locale
+    })
     const useComputed = reactive({
       getUser: computed(() => {
-        return context.root.$store.getters["users/getUser"];
-      }),
-    });
+        return context.root.$store.getters['users/getUser']
+      })
+    })
     const useUserLogin = (loginForm) => {
-      context.root.$store.dispatch("users/login", loginForm);
-    };
+      context.root.$store.dispatch('users/login', loginForm)
+    }
     const useUserLogout = () => {
-      context.root.$store.dispatch("users/logout");
-    };
+      context.root.$store.dispatch('users/logout')
+    }
     const console = (str: string) => {
-      alert("console : " + str);
-    };
+      alert('console : ' + str)
+    }
 
     watch(
       () => useState.selected,
       (value: string) => {
-        window.sessionStorage.locale = value;
+        window.sessionStorage.locale = value
       }
-    );
+    )
 
     onMounted(() => {
-      context.root._ON_EVENT("on", console);
-    });
+      context.root._ON_EVENT('on', console)
+    })
 
     onUnmounted(() => {
-      context.root._ON_EVENT("on", console);
-    });
+      context.root._ON_EVENT('on', console)
+    })
 
     return {
       state: useState,
       computed: useComputed,
       login: () => {
         const loginForm = {
-          id: "example@github.io",
-          password: "qwer1234",
-        };
+          id: 'example@github.io',
+          password: 'qwer1234'
+        }
 
-        useUserLogin(loginForm);
+        useUserLogin(loginForm)
       },
       logout: () => {
-        useUserLogout();
+        useUserLogout()
       },
       route: () => {
-        context.root._ROUTER_PUSH("about");
+        context.root._ROUTER_PUSH('about')
       },
       event: () => {
-        context.root._EMIT_EVENT("on", "event");
+        context.root._EMIT_EVENT('on', 'event')
       },
       reload: () => {
-        location.reload();
-      },
-    };
-  },
-});
+        location.reload()
+      }
+    }
+  }
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
