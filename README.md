@@ -125,3 +125,7 @@ $ cd "project name" && npm run start
 ## 💳 License
 
 [MIT](LICENSE)
+
+## 🤝 Contributors
+
+* freevue [https://github.com/freevuehub](https://github.com/freevuehub)
