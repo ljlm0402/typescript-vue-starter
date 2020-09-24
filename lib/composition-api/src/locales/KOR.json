@@ -1,0 +1,16 @@
+{
+    "HOME": "홈",
+    "ABOUT": "자세히",
+    "WELCOME": "환영합니다. {0}님",
+    "NOUSER": "로그인을 해주세요.",
+    "LOGIN": "로그인",
+    "LOGOUT": "로그아웃",
+    "ROUTE": "라우트",
+    "EVENT_BUS": "이벤트 버스",
+    "SELECT": "선택",
+    "KOREAN": "한국어",
+    "ENGLISH": "영어",
+    "RELOAD": "새로고침",
+    "ADD": "더하기",
+    "SUB": "빼기"
+}
