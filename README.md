@@ -9,29 +9,37 @@
 
 <br />
 
-## 🧐 What is it?
+## 🧐 What is Vue?
 
-Creates a new typescript vue application.
-application is configured to use TypeScript instead of plain JavaScript. 
+Vue is a progressive framework for building user interfaces. 
+
+Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. 
+
+The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.
 
 ## 🤔 Why typescript-vue-starter?
 
-Node Js is great for the rapid development of web-projects, but is often neglected because of the lack of
-type safety. TypeScript solves this issue and (along with its linter file) can even make your code
-more robust than some other static languages like Java.
+currently vue3 has greatly enhanced TypeScript support.
 
-## ⚙️ Installation
+However, the @vue/cli module has limitations due to various design patterns and template structures, 
+
+so it was created by combining modules that are useful in practice.
+
+## 🚀 Quick Start
+
+### Install with the npm global package
 
 ```sh
 $ npm install -g typescript-vue-starter
 ```
 
-## 🚀 Quick Start
+### Run npx to install the package
 
-The quickest way to get started is use npx and pass in the name of the project you want to create.
+npx is a tool in the JavaScript package management module, npm.
+
+This is a tool that allows you to run the npm package on a single run without installing the package.
+
 If you don't specify a project name, the default _typescript-vue-starter_ will be used instead.
-
-### 1. Create the app
 
 ```bash
 $ npx typescript-vue-starter "project name"
@@ -39,10 +47,14 @@ $ npx typescript-vue-starter "project name"
 
 Choose the template you want. We will create more templates later.
 
+### Select a templates
+
+<img src='https://github.com/ljlm0402/typescript-vue-starter/raw/images/cli.gif' border='0' alt='cli' />
+
 Start your typescript-vue-starter app in development mode at `http://localhost:8080/`
 
 ```bash
-$ cd "project name" && npm run start
+$ cd "project name" && npm run serve
 ```
 
 ## 🎠 Available commands for the server.
