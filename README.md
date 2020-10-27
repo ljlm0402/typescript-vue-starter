@@ -98,13 +98,15 @@ $ cd "project name" && npm run serve
 │   │   └── states.ts
 │   │
 │   ├── /utils
-│   │   ├── auth.route.ts
-│   │   ├── index.route.ts
-│   │   └── users.route.ts
+│   │   ├── common.ts
+│   │   ├── error.ts
+│   │   ├── http.ts
+│   │   ├── i18n.ts
+│   │   └── vueCommon.ts
 │   │
 │   ├── /views
-│   │   ├── auth.service.ts
-│   │   └── users.service.ts
+│   │   ├── About.vue
+│   │   └── Home.vue
 │   │
 │   ├── App.vue
 │   ├── main.ts
@@ -113,10 +115,15 @@ $ cd "project name" && npm run serve
 │   └── types.d.ts
 │
 ├── .browserslistrc
+├── .dockerignore
 ├── .editorconfig
 ├── .eslintrc.js
 ├── .gitignore
 ├── babel.config.js
+├── docker-compose.yml
+├── Dockerfile
+├── Makefile
+├── nginx.conf
 ├── package-lock.json
 ├── package.json
 └── tsconfig.json

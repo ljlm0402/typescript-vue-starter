@@ -1,0 +1,11 @@
+version: "3"
+
+services: 
+    client:
+        image: node:14
+        working_dir: /app
+        volumes: 
+            - ./:/app
+        ports:
+            - 8080:8080
+        command: sh -c "npm install && npm rebuild node-sass && npm run serve"
