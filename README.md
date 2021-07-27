@@ -11,9 +11,9 @@
 
 ## 🧐 What is Vue?
 
-Vue is a progressive framework for building user interfaces. 
+Vue is a progressive framework for building user interfaces.
 
-Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. 
+Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.
 
 The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.
 
@@ -21,7 +21,7 @@ The core library is focused on the view layer only, and is easy to pick up and i
 
 currently vue3 has greatly enhanced TypeScript support.
 
-However, the @vue/cli module has limitations due to various design patterns and template structures, 
+However, the @vue/cli module has limitations due to various design patterns and template structures,
 
 so it was created by combining modules that are useful in practice.
 
@@ -62,6 +62,7 @@ $ cd "project name" && npm run serve
 - Run the Server : `npm run serve`.
 - Build Static File: `npm run build`.
 - Check for linting errors: `npm run lint`.
+- Fix linting errors: `npm run lint:fix`.
 
 ## 🗂 Code Structure (default)
 
@@ -78,9 +79,20 @@ $ cd "project name" && npm run serve
 │   ├── /components
 │   │   └── HelloWorld.vue
 │   │
+│   ├── /helpers
+│   │   ├── common.ts
+│   │   ├── error.ts
+│   │   └── http.ts
+│   │
 │   ├── /locales
 │   │   ├── ENG.json
 │   │   └── KOR.json
+│   │
+│   ├── /mixins
+│   │   └── index.ts
+│   │
+│   ├── /plugins
+│   │   └── i18n.ts
 │   │
 │   ├── /router
 │   │   └── index.ts
@@ -96,13 +108,6 @@ $ cd "project name" && npm run serve
 │   │   ├── mutations-types.ts
 │   │   ├── mutations.ts
 │   │   └── states.ts
-│   │
-│   ├── /utils
-│   │   ├── common.ts
-│   │   ├── error.ts
-│   │   ├── http.ts
-│   │   ├── i18n.ts
-│   │   └── vueCommon.ts
 │   │
 │   ├── /views
 │   │   ├── About.vue
@@ -124,22 +129,21 @@ $ cd "project name" && npm run serve
 ├── Dockerfile
 ├── Makefile
 ├── nginx.conf
-├── package-lock.json
 ├── package.json
 └── tsconfig.json
 ```
 
 ## 📬 Recommended Commit Message
 
-|  When |  Commit Message  |
-|:--------|:-----------|
-| Add function | feat: ⚡️ Add function |
-| Fix bug | fix: 🐞 Fix bug |
-| Refactoring | refactor: 🛠 Refactoring |
-| Add package | package: 📦 Add package |
-| Fix readme | docs: 📚 Fix readme |
-| Improvements style | style: 👁 Improvements style |
-| New Releases | releases: 🎉 Releases |
+| When               | Commit Message       |
+| :----------------- | :------------------- |
+| Add function       | ⚡️ Add function     |
+| Fix bug            | 🐞 Fix bug           |
+| Refactoring        | 🛠 Refactoring        |
+| Add package        | 📦 Add package       |
+| Fix readme         | 📚 Fix readme        |
+| Improvements style | 👁 Improvements style |
+| New Releases       | 🎉 Releases          |
 
 ## 💳 License
 
@@ -147,4 +151,4 @@ $ cd "project name" && npm run serve
 
 ## 🤝 Contributors
 
-* freevue [https://github.com/freevuehub](https://github.com/freevuehub)
+- freevue [https://github.com/freevuehub](https://github.com/freevuehub)
