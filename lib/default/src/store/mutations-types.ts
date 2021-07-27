@@ -1,2 +1,2 @@
-export const ADDCOUNT = 'ADDCOUNT'
-export const SUBCOUNT = 'SUBCOUNT'
+export const ADDCOUNT = "ADDCOUNT";
+export const SUBCOUNT = "SUBCOUNT";
