@@ -1,10 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">{{ $t('HOME') }}</router-link> |
-      <router-link to="/about">{{ $t('ABOUT') }}</router-link>
+      <router-link to="/">{{ $t("HOME") }}</router-link> |
+      <router-link to="/about">{{ $t("ABOUT") }}</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

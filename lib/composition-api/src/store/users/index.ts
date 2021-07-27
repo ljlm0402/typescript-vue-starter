@@ -1,11 +1,11 @@
-import { Commit, Dispatch } from 'vuex'
+import { Commit, Dispatch } from "vuex";
 
 /**
  * mutations types
  */
-const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
-const LOGIN_FAIL = 'LOGIN_FAIL'
-const LOGOUT = 'LOGOUT'
+const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+const LOGIN_FAIL = "LOGIN_FAIL";
+const LOGOUT = "LOGOUT";
 
 /**
  * interface
@@ -32,59 +32,65 @@ interface LoginForm {
  */
 const state: UserState = {
   isLogin: false,
-  userInfo: null
-}
+  userInfo: null,
+};
 
 /**
  * getters
  */
 const getters = {
-  getUser (state: { userInfo: UserInfo }): UserInfo | null {
-    return state.userInfo
-  }
-}
+  getUser(state: { userInfo: UserInfo }): UserInfo | null {
+    return state.userInfo;
+  },
+};
 
 /**
  * actions
  */
 const actions = {
-  login (context: { commit: Commit; dispatch: Dispatch }, loginForm: LoginForm): void {
+  login(
+    context: { commit: Commit; dispatch: Dispatch },
+    loginForm: LoginForm
+  ): void {
     const token = {
-      type: 'Bearer',
-      value: 'qwertyuiop123456789'
-    }
+      type: "Bearer",
+      value: "qwertyuiop123456789",
+    };
 
-    sessionStorage.setItem('access_token', JSON.stringify(token))
-    context.commit(LOGIN_SUCCESS, loginForm)
+    sessionStorage.setItem("access_token", JSON.stringify(token));
+    context.commit(LOGIN_SUCCESS, loginForm);
   },
-  logout (context: { commit: Commit }): void {
-    context.commit(LOGOUT)
-  }
-}
+  logout(context: { commit: Commit }): void {
+    context.commit(LOGOUT);
+  },
+};
 
 /**
  * mutations
  */
 const mutations = {
-  [LOGIN_SUCCESS] (state: { isLogin: boolean; userInfo: UserInfo }, payload: UserInfo): void {
-    state.isLogin = true
-    state.userInfo = payload
+  [LOGIN_SUCCESS](
+    state: { isLogin: boolean; userInfo: UserInfo },
+    payload: UserInfo
+  ): void {
+    state.isLogin = true;
+    state.userInfo = payload;
   },
-  [LOGIN_FAIL] (state: { isLogin: boolean; userInfo: null }): void {
-    state.isLogin = false
-    state.userInfo = null
+  [LOGIN_FAIL](state: { isLogin: boolean; userInfo: null }): void {
+    state.isLogin = false;
+    state.userInfo = null;
   },
-  [LOGOUT] (state: { isLogin: boolean; userInfo: null }): void {
-    state.isLogin = false
-    state.userInfo = null
-    sessionStorage.removeItem('access_token')
-  }
-}
+  [LOGOUT](state: { isLogin: boolean; userInfo: null }): void {
+    state.isLogin = false;
+    state.userInfo = null;
+    sessionStorage.removeItem("access_token");
+  },
+};
 
 export default {
   namespaced: true,
   state,
   getters,
   actions,
-  mutations
-}
+  mutations,
+};
