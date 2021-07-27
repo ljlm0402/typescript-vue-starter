@@ -7,27 +7,27 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from '@vue/composition-api'
+import { defineComponent, reactive, computed } from "@vue/composition-api";
 
 export default defineComponent({
-  setup (_, context) {
+  setup(_, context) {
     const useComputed = reactive({
       count: computed(() => {
-        return context.root.$store.getters.getCount
-      })
-    })
+        return context.root.$store.getters.getCount;
+      }),
+    });
     const useAdd = (value: number) => {
-      context.root.$store.dispatch('addCount', value)
-    }
+      context.root.$store.dispatch("addCount", value);
+    };
     const useSub = (value: number) => {
-      context.root.$store.dispatch('subCount', value)
-    }
+      context.root.$store.dispatch("subCount", value);
+    };
 
     return {
       computed: useComputed,
       add: useAdd,
-      sub: useSub
-    }
-  }
-})
+      sub: useSub,
+    };
+  },
+});
 </script>

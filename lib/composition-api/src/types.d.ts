@@ -1,10 +1,10 @@
-import { AxiosInstance } from 'axios'
+import { AxiosInstance } from "axios";
 
 /* eslint-disable */
-declare module 'vue/types/vue' {
+declare module "vue/types/vue" {
   interface Vue {
     $http: AxiosInstance;
-    $EventBus: Vue;
+    $EventBus: any;
 
     _ROUTER_PUSH(url: string): void;
     _ROUTER_PUSH_PARAMS(name: string, params: any): void;
